@@ -6,7 +6,7 @@ jobs:
   hello_job:
     runs-on: ubuntu-latest
     steps:
-      -name: Say Hello
+      - name: Say Hello
       run: echo "Hello, GitHub Actions!"
-      -name: Check Python Version
-      run: Python --version
+      - name: Check Python Version
+      run: python --version
