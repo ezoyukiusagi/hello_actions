@@ -6,7 +6,7 @@ from playwright.async_api import async_playwright
 
 async def main():
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True)
+        browser = await p.chromium.launch(headless=True, args=["--no-sandbox", "--disable-setuid-sandbox"])
         page = await browser.new_page()
 
         await page.set_extra_http_headers({
